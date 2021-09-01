@@ -24,4 +24,17 @@ const madLib = `The Intro to JavaScript course is ${
 
 console.log(madLib);
 
-// switch between the 3, cannot repeat.
+var firstName = "Karolina";
+var interest = "coding";
+var hobby = "read";
+
+var awesomeMessage =
+  "Hi, my name is " +
+  firstName +
+  ". I love " +
+  interest +
+  ". In my spare time, I like to " +
+  hobby +
+  ".";
+
+console.log(awesomeMessage);
