@@ -38,3 +38,33 @@ var awesomeMessage =
   ".";
 
 console.log(awesomeMessage);
+
+9 + "3"; // ("93");
+9 + "three"; // ("9three");
+4 * "5"; // 20;
+4 + "5"; // ("45");
+"four" / 5; // nan;
+
+var weapon = "";
+var solved = false;
+
+var room = "billiards room";
+var suspect = "Mr. Parkes";
+
+if (room === "dining room") {
+  solved = true;
+  weapon = "knife";
+} else if (room === "billiards room") {
+  solved = true;
+  weapon = "pool stick";
+} else if (room === "gallery") {
+  solved = true;
+  weapon = "trophy";
+} else if (room === "ballroom") {
+  solved = true;
+  weapon = "poison";
+}
+
+if (solved) {
+  console.log(suspect + " did it in the " + room + " with the " + weapon + "!");
+}
