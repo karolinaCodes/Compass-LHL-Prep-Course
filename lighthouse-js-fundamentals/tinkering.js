@@ -169,3 +169,31 @@ if (
 } else {
   console.log("NA");
 }
+
+//Navigating the Food chain
+
+var category;
+
+var eatsPlants = true;
+var eatsAnimals = false;
+
+eatsPlants && !eatsAnimals ? (category = "herbivore") : (category = undefined);
+
+!eatsPlants && eatsAnimals ? (category = "carnivore") : (category = undefined);
+
+eatsPlants && eatsAnimals ? (category = "omnivore") : (category = undefined);
+
+console.log(category);
+
+eatsPlants ? (category = "herbivore") : null;
+eatsAnimals ? (category = "carnivore") : null;
+eatsPlants && eatsAnimals ? (category = "omnivore") : null;
+!eatsPlants && !eatsAnimals ? (category = "undefined") : null;
+
+var category = eatsPlants
+  ? eatsAnimals
+    ? "omnivore"
+    : "herbivore"
+  : eatsAnimals
+  ? "carnivore"
+  : "undefined";
