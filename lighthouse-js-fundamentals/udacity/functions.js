@@ -20,26 +20,26 @@
 
 // Laugh it off 2 Quiz
 
-function laugh(num) {
-  var sound = "";
-  for (var i = 1; i <= num; i++) {
-    sound += "ha";
-  }
-  return sound + "!";
-}
+// function laugh(num) {
+//   var sound = "";
+//   for (var i = 1; i <= num; i++) {
+//     sound += "ha";
+//   }
+//   return sound + "!";
+// }
 
-console.log(laugh(6));
+// console.log(laugh(6));
 
-function isThisWorking(input) {
-  console.log(
-    "Printing: isThisWorking was called and " +
-      input +
-      " was passed in as an argument."
-  );
-  return "Returning: I am returning this string!";
-}
+// function isThisWorking(input) {
+//   console.log(
+//     "Printing: isThisWorking was called and " +
+//       input +
+//       " was passed in as an argument."
+//   );
+//   return "Returning: I am returning this string!";
+// }
 
-isThisWorking(3);
+// isThisWorking(3);
 
 // Build a triangle Quiz (Scope)
 /*What the code should do:
@@ -50,20 +50,55 @@ isThisWorking(3);
 5-holder/accumulator variable that holds the string and return that variable.*/
 
 // creates a line of * for a given length
-function makeLine(length) {
-  var line = "";
-  for (var j = 1; j <= length; j++) {
-    line += "* ";
-  }
-  return line + "\n";
-}
+// function makeLine(length) {
+//   var line = "";
+//   for (var j = 1; j <= length; j++) {
+//     line += "* ";
+//   }
+//   return line + "\n";
+// }
 
-function buildTriangle(widestWidth) {
-  var output = "";
-  for (var i = 1; i <= widestWidth; i++) {
-    output += makeLine(i);
-  }
-  return output;
-}
+// function buildTriangle(widestWidth) {
+//   var triangle = "";
+//   for (var i = 1; i <= widestWidth; i++) {
+//     triangle += makeLine(i);
+//   }
+//   return triangle;
+// }
 
-console.log(buildTriangle(14));
+// console.log(buildTriangle(14));
+
+// //udacity solution was the same
+
+// // Laugh Quiz
+
+// var laugh = function (numberOfHas) {
+//   var hahaString = "";
+//   for (var i = 1; i <= numberOfHas; i++) {
+//     hahaString += "ha";
+//   }
+//   return hahaString + "!";
+// };
+
+// console.log(laugh(10));
+
+// // Cry Quiz
+
+// var cry = function Boohoo() {
+//   var sound = "boohoo!";
+//   return sound;
+// };
+// console.log(cry());
+
+// Inline Quiz
+// function emotions(myString, myFunc) {
+//   console.log("I am " + myString + ", " + myFunc(2));
+// }
+
+// emotions("happy", function (numberOfHas) {
+//   var hahaString = "";
+//   for (var i = 1; i <= numberOfHas; i++) {
+//     hahaString += "ha";
+//   }
+//   return hahaString + "!";
+// });
