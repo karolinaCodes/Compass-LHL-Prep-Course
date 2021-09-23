@@ -37,4 +37,34 @@
 
 // console.log(savingsAccount.printAccountSummary());
 
-//Bank accounts 2
+// Faceboo friends Quiz
+
+const facebookProfile = {
+  name: "Karolina",
+  friends: 1,
+  messages: ["I like pizza", "I want to be a swe"],
+  postMessage: function (message) {
+    this.messages.push(message);
+  },
+  deleteMessage: function (index) {
+    this.messages.splice(index, 1);
+  },
+  addFriend: function () {
+    this.friends++;
+  },
+  removeFriend: function () {
+    this.friends--;
+  },
+};
+
+// Donuts Revisited
+var donuts = [
+  { type: "Jelly", cost: 1.22 },
+  { type: "Chocolate", cost: 2.45 },
+  { type: "Cider", cost: 1.59 },
+  { type: "Boston Cream", cost: 5.99 },
+];
+
+donuts.forEach(function (donut) {
+  console.log(donut.type + " donuts cost $" + donut.cost + " each");
+});
