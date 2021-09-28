@@ -22,27 +22,27 @@
 
 // console.log(chooseStations(stations));
 
-// // X Marks the Perfect Shot
+// X Marks the Perfect Shot
 
-// function finalPosition(moves) {
-//   let x = 0;
-//   let y = 0;
-//   for (let move of moves) {
-//     if (move === "north") {
-//       y++;
-//     } else if (move === "south") {
-//       y--;
-//     } else if (move === "west") {
-//       x--;
-//     } else if (move === "east") {
-//       x++;
-//     }
-//   }
-//   return [x, y];
-// }
-// const moves = ["north", "north", "west", "west", "north", "east", "north"];
+function finalPosition(moves) {
+  let x = 0;
+  let y = 0;
+  for (let move of moves) {
+    if (move === "north") {
+      y++;
+    } else if (move === "south") {
+      y--;
+    } else if (move === "west") {
+      x--;
+    } else if (move === "east") {
+      x++;
+    }
+  }
+  return [x, y];
+}
+const moves = ["north", "north", "west", "west", "north", "east", "north"];
 
-// console.log(finalPosition(moves));
+console.log(finalPosition(moves));
 
 // // Age calculator
 
