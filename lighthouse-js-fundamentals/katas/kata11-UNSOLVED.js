@@ -4,6 +4,9 @@
 //total volume of an attraction
 
 // Use the value below whenever you need the value of Pi
+
+//UNSOLVED
+
 const PI = 3.14159;
 
 const sphereVolume = function (radius) {
@@ -13,7 +16,7 @@ const sphereVolume = function (radius) {
 console.log(4186 < sphereVolume(10) && sphereVolume(10) < 4189);
 
 const coneVolume = function (radius, height) {
-  Math.sqrt(radius * radius + height * height);
+  let volume = ((1 / 3) * PI(radius)) ^ 2(height);
 };
 
 console.log(45 < coneVolume(3, 5) && coneVolume(3, 5) < 49);
