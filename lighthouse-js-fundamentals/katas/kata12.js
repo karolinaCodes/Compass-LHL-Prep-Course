@@ -1,11 +1,11 @@
 // The Great Codeville Bake-off
 
 const chooseRecipe = function (bakeryA, bakeryB, recipes) {
-  // Code here!
+  for (let i<)
 };
 
 /////********programming trick !!! helper function */
-const ingredientCheck = function () {
+const ingredientCheck = function (recipeIngredients) {
   //recipe.ingredients array as input array
 };
 
