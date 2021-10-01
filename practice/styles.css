@@ -1,0 +1,9 @@
+#empty {
+  width: 500px;
+  background-color: red;
+}
+
+#flex {
+  display: flex;
+  justify-content: center;
+}
