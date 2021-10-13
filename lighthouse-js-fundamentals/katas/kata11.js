@@ -1,4 +1,4 @@
-// Bouncy Castles
+// Bouncy Castles- (refactored)
 
 const PI = 3.14159;
 
@@ -23,26 +23,57 @@ const prismVolume = function (height, width, depth) {
 
 console.log(prismVolume(3, 4, 5) === 60);
 
-//calculate the total volume of an attraction
+//calculate the total volume of the solids (refactored version)
 const totalVolume = function (solids) {
-  let totalVolume = 0;
+  //instantiate an empty array into which will add the volume for each solid
+  const volumeArray = [];
 
+  //loop over solids array and uses switch statement to compare the solid type to three cases. for which ever case the type matches, it adds the volume of the shape which is calculated by the respective function call
   for (let i = 0; i < solids.length; i++) {
-    if (solids[i].type === "sphere") {
-      totalVolume += sphereVolume(solids[i].radius);
-    } else if (solids[i].type === "cone") {
-      totalVolume += coneVolume(solids[i].radius, solids[i].height);
-    } else if (solids[i].type === "prism") {
-      totalVolume += prismVolume(
-        solids[i].height,
-        solids[i].width,
-        solids[i].depth
-      );
+    switch (solids[i].type) {
+      case "sphere":
+        volumeArray.push(sphereVolume(solids[i].radius));
+        break;
+      case "cone":
+        volumeArray.push(coneVolume(solids[i].radius, solids[i].height));
+        break;
+      case "prism":
+        volumeArray.push(
+          prismVolume(solids[i].height, solids[i].width, solids[i].depth)
+        );
+        break;
     }
   }
 
+  //accumulates the array of shape volumes into one totalvolume and returns it
+  const totalVolume = volumeArray.reduce(
+    (accumulator, curEl) => accumulator + curEl,
+    0
+  );
+
   return totalVolume;
 };
+
+//calculate the total volume of an attraction (version one of solution- not refactored)
+// const totalVolume = function (solids) {
+//   let totalVolume = 0;
+
+//   for (let i = 0; i < solids.length; i++) {
+//     if (solids[i].type === "sphere") {
+//       totalVolume += sphereVolume(solids[i].radius);
+//     } else if (solids[i].type === "cone") {
+//       totalVolume += coneVolume(solids[i].radius, solids[i].height);
+//     } else if (solids[i].type === "prism") {
+//       totalVolume += prismVolume(
+//         solids[i].height,
+//         solids[i].width,
+//         solids[i].depth
+//       );
+//     }
+//   }
+
+//   return totalVolume;
+// };
 
 const largeSphere = {
   type: "sphere",
