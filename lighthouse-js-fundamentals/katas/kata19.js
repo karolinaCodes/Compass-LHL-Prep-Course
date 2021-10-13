@@ -1,12 +1,17 @@
 // Kata 19 - Queen Threat Detector
 
 function generateBoard(queenW, queenB) {
+  //create top level array to hold the nested arrays
   const outerArray = [];
+
+  //destructure the row and column values from the two queen inputs
   const [rowW, columnW] = queenW;
   const [rowB, columnB] = queenB;
 
+  //nestedArray creates an empty array into which the 1's and 0's are pushed to create a board
+  //creates 8 rows/arrays (first loop) of 8 columns/elements (second loop), if the coordinates correspond to the coordinates of the two queens a 1 is added, otherwise a 0 is added to the array
   for (let i = 0; i < 8; i++) {
-    nestedArray = [];
+    let nestedArray = [];
     for (let j = 0; j < 8; j++) {
       if ((i === rowW && j === columnW) || (i === rowB && j === columnB)) {
         nestedArray.push(1);
@@ -60,11 +65,19 @@ function queenThreat(generatedBoard) {
   return false;
 }
 
-// let whiteQueen = [0, 5];
-// let blackQueen = [5, 0];
+let whiteQueen = [0, 5];
+let blackQueen = [5, 0];
+let generatedBoard = generateBoard(whiteQueen, blackQueen);
+console.log(generatedBoard);
+console.log(queenThreat(generatedBoard));
+
+// let whiteQueen = [0, 0];
+// let blackQueen = [5, 7];
 // let generatedBoard = generateBoard(whiteQueen, blackQueen);
 // console.log(generatedBoard);
 // console.log(queenThreat(generatedBoard));
+
+//test input
 // console.log(
 //   queenThreat([
 //     [0, 0, 0, 1, 0, 0, 0, 0],
@@ -77,9 +90,3 @@ function queenThreat(generatedBoard) {
 //     [0, 0, 0, 0, 0, 0, 0, 0],
 //   ])
 // );
-
-let whiteQueen = [0, 0];
-let blackQueen = [5, 7];
-let generatedBoard = generateBoard(whiteQueen, blackQueen);
-console.log(generatedBoard);
-console.log(queenThreat(generatedBoard));
